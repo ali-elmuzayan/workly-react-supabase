@@ -1,10 +1,21 @@
-import { Button } from "@/components/ui/button";
+import { Routes, Route } from "react-router";
+import Home from "./pages/home";
+// import RootLayout from "./layouts/app-layout";
 
 const App = () => {
   return (
-    <div className="flex min-h-svh flex-col items-center justify-center">
-      <Button>Click me</Button>
-    </div>
+    <Routes>
+      {/* landing Page */}
+      <Route path="/" element={<Home />} />
+
+      {/* Authentication */}
+
+      {/* Application */}
+
+      {/* <Route path="/" element={<RootLayout />}>
+        <Route index element={<Home />} />
+      </Route> */}
+    </Routes>
   );
 };
 
