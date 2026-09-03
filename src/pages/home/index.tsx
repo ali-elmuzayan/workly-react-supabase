@@ -4,7 +4,7 @@ import Features from "./components/sections/features";
 import GetInTouch from "./components/sections/get-in-touch";
 import HeroSection from "./components/sections/hero";
 import HowItWorks from "./components/sections/how-it-works";
-import OverviewSection from "./components/sections/overview";
+import PreviewSection from "./components/sections/overview";
 
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
       <div className="min-h-screen bg-background text-foreground font-[Geist_Variable,sans-serif] ">
         <Header />
         <HeroSection />
-        <OverviewSection />
+        <PreviewSection />
         <Features />
         <HowItWorks />
         <GetInTouch />

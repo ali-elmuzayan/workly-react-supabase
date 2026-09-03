@@ -39,15 +39,17 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="px-4 py-24 bg-secondary/30 space-y-16">
-      <SectionTitle
-        title="Everything you need to stay on top"
-        subtitle="Four tightly integrated tools that work together — no more switching between apps"
-      />
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-        {features.map((feature) => (
-          <FeatureCard {...feature} />
-        ))}
+    <section id="features" className="px-4 py-24 bg-secondary/30">
+      <div className="max-w-6xl mx-auto space-y-12">
+        <SectionTitle
+          title="Everything you need to stay on top"
+          subtitle="Four tightly integrated tools that work together — no more switching between apps"
+        />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {features.map((feature) => (
+            <FeatureCard {...feature} />
+          ))}
+        </div>
       </div>
     </section>
   );

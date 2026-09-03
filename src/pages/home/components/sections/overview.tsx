@@ -1,52 +1,61 @@
 // import ProductivityLine from "@/components/productivity-line";
 
 const analyticsSummaries: {
-  title: string;
+  label: string;
   value: string;
   color: string;
 }[] = [
   {
-    title: "notes",
+    label: "Notes",
     value: "24",
-    color: "purble",
+    color: "bg-violet-500/15 text-violet-600",
   },
   {
-    title: "open tasks",
+    label: "Open tasks",
     value: "8",
-    color: "blue",
+    color: "bg-blue-500/15 text-blue-600",
   },
   {
-    title: "Projects",
+    label: "Projects",
     value: "3",
-    color: "green",
+    color: "bg-emerald-500/15 text-emerald-600",
   },
   {
-    title: "Focus",
-    value: "90M",
-    color: "orange",
+    label: "Focus today",
+    value: "90m",
+    color: "bg-amber-500/15 text-amber-600",
   },
 ];
 
 const OverviewSection = () => {
   return (
-    <div className="border border-gray-300 rounded-xl shadow-xl p-8">
-      <div className="flex items-center  gap-4">
-        {analyticsSummaries.map(({ title, value, color }) => (
-          <div className="border border-gray-200 p-2 rounded-lg w-full ">
-            <h3
-              className={`text-${color}-900 bg-${color}-300 rounded w-fit px-1 font-bold text-lg`}
-            >
-              {value}
-            </h3>
-            <p className="text-sm font-normal">{title}</p>
+    <section>
+      <div className="max-w-5xl mx-auto">
+        <div className="glass-card p-6 sm:p-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-6">
+            {analyticsSummaries.map((s) => (
+              <div
+                key={s.label}
+                className="rounded-xl border border-border/60 p-4 text-left"
+              >
+                <p
+                  className={`text-2xl font-bold ${s.color} -ml-1 px-1 rounded-lg w-fit mb-1`}
+                >
+                  {s.value}
+                </p>
+                <p className="text-xs text-muted-foreground">{s.label}</p>
+              </div>
+            ))}
           </div>
-        ))}
+          <div className="h-2.5 rounded-full bg-secondary overflow-hidden">
+            <div className="h-full w-3/5 bg-primary rounded-full" />
+          </div>
+          <p className="text-xs text-muted-foreground mt-2 text-left">
+            Weekly productivity — 60%
+          </p>
+        </div>
       </div>
-      <div>
-        {/* <ProductivityLine percentage={60} /> */}
-        <p>Weekly productivity -- 60%</p>
-      </div>
-    </div>
+    </section>
   );
 };
 

@@ -104,6 +104,6 @@
   }
 
   .flex-between {
-    @apply flex justify-between items-center;
+    @apply flex items-center justify-between gap-4;
   }
 }
