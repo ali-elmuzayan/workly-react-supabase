@@ -9,6 +9,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve("./src"),
+      "@validation": path.resolve("./src/validation"),
     },
   },
 });
