@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import {
   registerSchema,
   type TRegisterFormInput,
-} from "@/validation/registerSchema";
+} from "@/features/auth/validations/registerSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import AuthInput from "@/features/auth/components/auth-input";
 import useFocusRef from "@/hooks/useFocusRef";

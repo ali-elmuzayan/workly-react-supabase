@@ -1,7 +1,10 @@
 import AuthInput from "@/features/auth/components/auth-input";
 import { Button } from "@/components/ui/button";
 import useFocusRef from "@/hooks/useFocusRef";
-import { loginSchema, type TLoginFormInputs } from "@/validation/loginSchema";
+import {
+  loginSchema,
+  type TLoginFormInputs,
+} from "@/features/auth/validations/loginSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, type SubmitHandler } from "react-hook-form";
 
