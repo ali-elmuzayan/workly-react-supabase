@@ -3,7 +3,9 @@ import Home from "./features/landing/pages/home";
 import Login from "./features/auth/pages/login";
 import Register from "./features/auth/pages/register";
 import AuthLayout from "./layouts/auth-layout";
-// import RootLayout from "./layouts/app-layout";
+import AppLayout from "./layouts/app-layout";
+import Dashboard from "./features/dashboard/page";
+import ProtectedGuard from "./components/ProtectsGuard";
 
 const App = () => {
   return (
@@ -18,7 +20,11 @@ const App = () => {
       </Route>
 
       {/* Application */}
-      {/* <Route path="/" element={<AppLayout />}></Route> */}
+      <Route element={<ProtectedGuard />}>
+        <Route path="/" element={<AppLayout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+        </Route>
+      </Route>
     </Routes>
   );
 };

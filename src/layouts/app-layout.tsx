@@ -1,7 +1,7 @@
 import { Outlet } from "react-router";
 import Header from "./components/header";
 
-const RootLayout = () => {
+const AppLayout = () => {
   return (
     <div className="w-full min-h-screen bg-background">
       <Header />
@@ -12,4 +12,4 @@ const RootLayout = () => {
   );
 };
 
-export default RootLayout;
+export default AppLayout;
