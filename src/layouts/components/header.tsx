@@ -1,6 +1,7 @@
 import Logo from "@/components/logo";
 import Nav from "./nav";
-import AuthActions from "./auth-actions";
+import { UserButton } from "@clerk/clerk-react";
+// import AuthActions from "./auth-actions";
 
 const Header = () => {
   return (
@@ -10,7 +11,8 @@ const Header = () => {
         <div className="glass-card h-16 flex-between pl-4 pr-2 sm:pl-6 sm:pr-4">
           <Logo />
           <Nav />
-          <AuthActions />
+          {/* <AuthActions /> */}
+          <UserButton />
         </div>
       </div>
     </header>

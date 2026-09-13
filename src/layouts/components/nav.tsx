@@ -1,10 +1,10 @@
 import { NavLink } from "react-router";
 const navLinks = [
   { to: "/dashboard", label: "Dashboard", end: true },
-  { to: "/dashboard/notes", label: "Notes" },
-  { to: "/dashboard/tasks", label: "Tasks" },
-  { to: "/dashboard/projects", label: "Projects" },
-  { to: "/dashboard/pomodoro", label: "Pomodoro" },
+  { to: "/notes", label: "Notes" },
+  { to: "/tasks", label: "Tasks" },
+  { to: "/projects", label: "Projects" },
+  { to: "/pomodoro", label: "Pomodoro" },
 ];
 
 const Nav = () => {
