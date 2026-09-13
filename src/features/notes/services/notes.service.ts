@@ -28,6 +28,28 @@ export const getAllNotesByUser = async (
 };
 
 /**
+ * Get the Note by its id
+ */
+
+export const getNoteById = async (token: string, id: string) => {
+  const response = await fetch(`${API_BASE_URL}/notes/${id}`, {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed fetching the note");
+  }
+
+  const data: { note: Note } = await response.json();
+
+  return data.note;
+};
+
+/**
  * Create a new note
  */
 export const createNote = async (token: string, note: CreateNoteDTO) => {
